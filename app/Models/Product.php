@@ -14,6 +14,7 @@ class Product extends Model
     // Whitelist properti yang boleh diubah ke table database
     protected $fillable = [
         'title',
+        'sku',
         'price',
         'stock',
         'category',
