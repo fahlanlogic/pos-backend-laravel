@@ -10,4 +10,14 @@ class Product extends Model
 {
     /** @use HasFactory<ProductFactory> */
     use HasFactory;
+
+    // Whitelist properti yang boleh diubah ke table database
+    protected $fillable = [
+        'title',
+        'price',
+        'stock',
+        'category',
+        'discount_percentage',
+        'description',
+    ];
 }
