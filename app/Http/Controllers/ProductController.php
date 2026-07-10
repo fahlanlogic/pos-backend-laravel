@@ -7,12 +7,24 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return response()->json([
+            [
+                'product' => [
+                    [
+                        'id' => 1,
+                        'name' => 'Product 1',
+                        'price' => 10.99,
+                    ],
+                    [
+                        'id' => 1,
+                        'name' => 'Product 1',
+                        'price' => 10.99,
+                    ],
+                ],
+            ],
+        ]);
     }
 
     /**
