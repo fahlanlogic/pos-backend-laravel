@@ -25,7 +25,8 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'sku' => 'nullable|string|max:255|unique:products,sku', // urutan penting, sometimes dan nullable harus diawal, unique a/ pengecekan ke db yang membutuhkan waktu
+            // urutan penting, sometimes dan nullable harus diawal, unique a/ pengecekan ke db yang membutuhkan waktu
+            'sku' => 'nullable|string|max:255|unique:products,sku', // unique:products,sku = unique:nama_tabel,nama_kolom / jika tidak ada lolos, jika ada gagal
             'title' => 'required|string|max:255',
             'price' => 'required|numeric|min:0',
             'stock' => 'sometimes|integer|min:0',
